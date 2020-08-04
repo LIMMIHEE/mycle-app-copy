@@ -21,9 +21,13 @@
         android:name="com.mirimhee.cp_mycle.ui.bulletin.bulletinFragment"
         android:label="bulletin"
         tools:layout="@layout/fragment_bulletin_board" />
-
     <fragment
         android:id="@+id/navigation_notifications"
+        android:name="com.mirimhee.cp_mycle.ui.notifications.NotificationsFragment"
+        android:label="notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/navigation_info"
         android:name="com.mirimhee.cp_mycle.ui.info.infoFragment"
         android:label="Info"
         tools:layout="@layout/fragment_info" />
