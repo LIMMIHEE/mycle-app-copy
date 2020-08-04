@@ -16,10 +16,15 @@
         android:name="com.mirimhee.cp_mycle.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/navigation_bulletin_board"
+        android:name="com.mirimhee.cp_mycle.ui.bulletin.bulletinFragment"
+        android:label="bulletin"
+        tools:layout="@layout/fragment_bulletin_board" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.mirimhee.cp_mycle.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:name="com.mirimhee.cp_mycle.ui.info.infoFragment"
+        android:label="Info"
+        tools:layout="@layout/fragment_info" />
 </navigation>
