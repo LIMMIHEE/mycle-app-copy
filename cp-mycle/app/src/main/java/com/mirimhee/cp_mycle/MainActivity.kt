@@ -24,6 +24,6 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-        viewPager.adapter = PageAdapter(supportFragmentManager)
+//        viewPager.adapter = PageAdapter(supportFragmentManager)
     }
 }
