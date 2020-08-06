@@ -23,10 +23,6 @@ class bulletinFragment: Fragment() {
         BulletinViewModel =
             ViewModelProviders.of(this).get(bulletinViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_bulletin_board, container, false)
-        val textView: TextView = root.findViewById(R.id.text_bulletinText)
-        BulletinViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
         return root
     }
 }

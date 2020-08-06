@@ -7,47 +7,32 @@
     tools:context=".ui.home.HomeFragment">
 
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabLayout"
+        android:id="@+id/garage_selection"
         android:layout_width="204dp"
         android:layout_height="0dp"
-        app:layout_constraintStart_toEndOf="@+id/viewPager"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.tabs.TabItem
-            android:id="@+id/tabItem"
+            android:id="@+id/mycar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="내 차고" />
 
         <com.google.android.material.tabs.TabItem
-            android:id="@+id/tabItem2"
+            android:id="@+id/ourcar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="모두의 차고" />
     </com.google.android.material.tabs.TabLayout>
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewPager"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/CarViewPager"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/garage_selection" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
