@@ -3,187 +3,298 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#E4E4E4">
 
-    <Button
-        android:id="@+id/settingButton"
-        android:layout_width="58dp"
-        android:layout_height="28dp"
-        android:background="#00FFFFFF"
-        android:drawableLeft="@drawable/ic_baseline_settings_24"
-        android:onClick="onSettingButtonClick"
-        android:text="설정"
-        android:textColor="#5C5C5C"
-        tools:layout_editor_absoluteX="338dp"
-        tools:layout_editor_absoluteY="16dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="더보기"
-        android:textColor="#1E1E1E"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="20dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="운전자 추천 카드"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="188dp" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="413dp"
+                android:layout_height="1030dp"
+                android:background="#FAFAFA">
 
-    <Button
-        android:id="@+id/driver_recom"
-        android:layout_width="411dp"
-        android:layout_height="56dp"
-        android:background="#00FFFFFF"
-        android:drawableStart="@drawable/card_uramen_hand"
-        android:drawablePadding="10dp"
-        android:gravity="center|left"
-        android:paddingLeft="20dp"
-        android:text="주유비, 정비소, 주차비 10% 할인 카드\n5만원이상 결제시 5만원 캐시백"
-        tools:layout_editor_absoluteY="220dp" />
+                <Button
+                    android:id="@+id/settingButton"
+                    android:layout_width="58dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="17dp"
+                    android:layout_marginRight="17dp"
+                    android:background="#00FFFFFF"
+                    android:drawableLeft="@drawable/ic_baseline_settings_24"
+                    android:onClick="onSettingButtonClick"
+                    android:text="설정"
+                    android:textColor="#5C5C5C"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/my_insurance"
-        android:layout_width="411dp"
-        android:layout_height="52dp"
-        android:background="#00FFFFFF"
-        android:drawableStart="@drawable/tegami_yomu_woman_hagaki"
-        android:drawableEnd="@drawable/event_banner"
-        android:drawablePadding="10dp"
-        android:gravity="center|left"
-        android:paddingLeft="20dp"
-        android:text="운전자 보험료 확인하기"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="404dp" />
+                <Button
+                    style="?android:borderlessButtonStyle"
+                    android:id="@+id/my_insurance"
+                    android:layout_width="411dp"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:drawableStart="@drawable/tegami_yomu_woman_hagaki"
+                    android:drawableEnd="@drawable/event_banner"
+                    android:drawablePadding="10dp"
+                    android:gravity="center|left"
+                    android:paddingLeft="20dp"
+                    android:text="운전자 보험료 확인하기"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/myCar_insurance" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="운전자 추천 서비스"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="307dp" />
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="34dp"
+                    android:layout_marginEnd="316dp"
+                    android:layout_marginRight="316dp"
+                    android:text="마이클 이벤트"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lodging_discount" />
 
-    <Button
-        android:id="@+id/myCar_insurance"
-        android:layout_width="411dp"
-        android:layout_height="56dp"
-        android:background="#00FFFFFF"
-        android:drawableStart="@drawable/car_smart_key_case"
-        android:drawablePadding="10dp"
-        android:gravity="center|left"
-        android:paddingLeft="20dp"
-        android:text="내 차 보험료 확인하기"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="335dp" />
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="더보기"
+                    android:textColor="#1E1E1E"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/lodging_discount"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:background="#00FFFFFF"
-        android:drawableStart="@drawable/travel_suitcase_sticker"
-        android:drawableEnd="@drawable/event_banner"
-        android:drawablePadding="10dp"
-        android:gravity="center|left"
-        android:paddingLeft="20dp"
-        android:text="국내숙소 12% 할인받기"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="534dp" />
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="192dp"
+                    android:layout_marginEnd="299dp"
+                    android:layout_marginRight="299dp"
+                    android:text="운전자 추천 카드"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/sales_estimate"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:background="#00FFFFFF"
-        android:drawableStart="@drawable/car_unten_keitai"
-        android:drawablePadding="10dp"
-        android:gravity="center|left"
-        android:paddingLeft="20dp"
-        android:text="내 차 무료 판매견적 받기"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="471dp" />
+                <Button
+                    android:id="@+id/driver_recom"
+                    style="?android:borderlessButtonStyle"
+                    android:layout_width="411dp"
+                    android:layout_height="58dp"
+                    android:layout_marginTop="216dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:drawableStart="@drawable/card_uramen_hand"
+                    android:drawablePadding="10dp"
+                    android:gravity="center|left"
+                    android:paddingLeft="20dp"
+                    android:text="주유비, 정비소, 주차비 10% 할인 카드\n5만원이상 결제시 5만원 캐시백"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/month_benefits"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:background="#00FFFFFF"
-        android:drawableStart="@drawable/kouji_maintenance"
-        android:drawablePadding="10dp"
-        android:gravity="center|left"
-        android:paddingLeft="20dp"
-        android:text="이달의 정비 · 세차 혜택"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="654dp" />
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginEnd="287dp"
+                    android:layout_marginRight="287dp"
+                    android:text="운전자 추천 서비스"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/driver_recom" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="371dp"
-        android:layout_height="107dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="60dp" />
+                <Button
+                    style="?android:borderlessButtonStyle"
+                    android:id="@+id/myCar_insurance"
+                    android:layout_width="411dp"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:drawableStart="@drawable/car_smart_key_case"
+                    android:drawablePadding="10dp"
+                    android:gravity="center|left"
+                    android:paddingLeft="20dp"
+                    android:text="내 차 보험료 확인하기"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="마이클 이벤트"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="618dp" />
+                <Button
+                    style="?android:borderlessButtonStyle"
+                    android:id="@+id/lodging_discount"
+                    android:layout_width="411dp"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:drawableStart="@drawable/travel_suitcase_sticker"
+                    android:drawableEnd="@drawable/event_banner"
+                    android:drawablePadding="10dp"
+                    android:gravity="center|left"
+                    android:paddingLeft="20dp"
+                    android:text="국내숙소 12% 할인받기"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sales_estimate" />
 
-    <Button
-        android:id="@+id/Invitation_Event"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:background="#00FFFFFF"
-        android:drawableStart="@drawable/present"
-        android:drawablePadding="10dp"
-        android:gravity="center|left"
-        android:paddingLeft="20dp"
-        android:text="친구 초대 이벤트"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="717dp" />
+                <Button
+                    style="?android:borderlessButtonStyle"
+                    android:id="@+id/sales_estimate"
+                    android:layout_width="411dp"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:drawableStart="@drawable/car_unten_keitai"
+                    android:drawablePadding="10dp"
+                    android:gravity="center|left"
+                    android:paddingLeft="20dp"
+                    android:text="내 차 무료 판매견적 받기"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/my_insurance" />
 
-    <Button
-        android:id="@+id/Propensity_test"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:background="#00FFFFFF"
-        android:drawableStart="@drawable/mushimegane_boy"
-        android:drawablePadding="10dp"
-        android:gravity="center|left"
-        android:paddingLeft="20dp"
-        android:text="운전자 성향 테스트"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="781dp" />
+                <Button
+                    android:id="@+id/Propensity_test"
+                    style="?android:borderlessButtonStyle"
+                    android:layout_width="408dp"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:drawableStart="@drawable/mushimegane_boy"
+                    android:drawablePadding="10dp"
+                    android:gravity="center|left"
+                    android:paddingLeft="20dp"
+                    android:text="운전자 성향 테스트"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Invitation_Event" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="데이터 연동 설정"
-        tools:layout_editor_absoluteX="23dp"
-        tools:layout_editor_absoluteY="854dp" />
+                <Button
+                    style="?android:borderlessButtonStyle"
+                    android:id="@+id/gas_station_point"
+                    android:layout_width="411dp"
+                    android:layout_height="54dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="16dp"
+                    android:drawableStart="@drawable/car_hokyuu_gasoline"
+                    android:drawablePadding="10dp"
+                    android:gravity="center|left"
+                    android:paddingLeft="20dp"
+                    android:text="주유소 포인트 적립 연동"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
-    <Button
-        android:id="@+id/gas_station_point"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:background="#00FFFFFF"
-        android:drawableStart="@drawable/car_hokyuu_gasoline"
-        android:drawablePadding="10dp"
-        android:gravity="center|left"
-        android:paddingLeft="20dp"
-        android:text="주유소 포인트 적립 연동"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="889dp" />
+                <Button
+                    style="?android:borderlessButtonStyle"
+                    android:id="@+id/Invitation_Event"
+                    android:layout_width="411dp"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:drawableStart="@drawable/present"
+                    android:drawablePadding="10dp"
+                    android:gravity="center|left"
+                    android:paddingLeft="20dp"
+                    android:text="친구 초대 이벤트"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/month_benefits" />
+
+                <Button
+                    style="?android:borderlessButtonStyle"
+                    android:id="@+id/month_benefits"
+                    android:layout_width="411dp"
+                    android:layout_height="54dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="17dp"
+                    android:drawableStart="@drawable/kouji_maintenance"
+                    android:drawablePadding="10dp"
+                    android:gravity="center|left"
+                    android:paddingLeft="20dp"
+                    android:text="이달의 정비 · 세차 혜택"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginEnd="292dp"
+                    android:layout_marginRight="292dp"
+                    android:text="데이터 연동 설정"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Propensity_test" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="371dp"
+                    android:layout_height="107dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="56dp"
+                    android:layout_marginEnd="21dp"
+                    android:layout_marginRight="21dp"
+                    android:text="Button"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    style="?android:borderlessButtonStyle"
+                    android:id="@+id/Notification"
+                    android:layout_width="411dp"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:drawableStart="@drawable/notification"
+                    android:drawablePadding="10dp"
+                    android:gravity="center|left"
+                    android:paddingLeft="20dp"
+                    android:text="주유 결제 알림 설정"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gas_station_point" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
