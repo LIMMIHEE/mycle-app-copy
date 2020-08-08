@@ -31,4 +31,5 @@
         android:name="com.mirimhee.cp_mycle.ui.info.infoFragment"
         android:label="Info"
         tools:layout="@layout/fragment_info" />
+
 </navigation>
