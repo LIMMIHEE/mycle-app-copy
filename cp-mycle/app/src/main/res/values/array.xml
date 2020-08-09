@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="PlaceArray">
+        <item>가까운 장소</item>
+        <item>방문 장소</item>
+    </string-array>
+
+    <string-array name="monetary_unit">
+        <item>원(₩)</item>
+        <item>달러($)</item>
+        <item>엔(¥)</item>
+        <item>유로(€)</item>
+        <item>파운드(£)</item>
+        <item>위안(¥)</item>
+    </string-array>
+
+</resources>
