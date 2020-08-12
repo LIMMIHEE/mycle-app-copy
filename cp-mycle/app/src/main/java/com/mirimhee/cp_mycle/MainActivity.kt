@@ -34,37 +34,17 @@ class MainActivity : AppCompatActivity() {
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
         val navController = findNavController(R.id.nav_host_fragment)
-        val appBarConfiguration = AppBarConfiguration(setOf(
-                R.id.navigation_home, R.id.navigation_dashboard,R.id.navigation_bulletin_board, R.id.navigation_info,R.id.navigation_notifications))
+        val appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.navigation_home,
+                R.id.navigation_dashboard,
+                R.id.navigation_bulletin_board,
+                R.id.navigation_info,
+                R.id.navigation_notifications
+            )
+        )
 
         navView.setupWithNavController(navController)
-
-//        val settingButton : Button = findViewById(R.id.settingButton);
-//        settingButton.setOnClickListener{
-//            startActivity(Intent(this,setting::class.java))
-//            finish()
-//        }
-
     }
-    /*
-    fun changeGarage(  ){
-        val fragment :Fragment ;
-
-        when(view.id){
-            R.id.mycar ->return LayoutInflater.inflate(R.layout.fragment_my_car, container, false)
-            R.id.ourcar ->return LayoutInflater.inflate(R.layout.fragment_our_car, container, false)
-            else ->return LayoutInflater.inflate(R.layout.fragment_my_car, container, false)
-        }
-
-        val fragmentmanager : FragmentManager;
-        fragmentmanager.getFragment()
-    }
-
-     */
-
-//    fun onSettingButtonClick(){
-//        startActivity(Intent(this,setting::class.java))
-//        finish()
-//    }
 }
 

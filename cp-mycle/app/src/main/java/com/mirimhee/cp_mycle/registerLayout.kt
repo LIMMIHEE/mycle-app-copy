@@ -87,9 +87,9 @@ class registerLayout : AppCompatActivity() {
             if (!Basic_information){
                 try{
                     var SQL_DB = this.openOrCreateDatabase("memberList", Context.MODE_PRIVATE, null);
-                    SQL_DB.execSQL("Create table if not exists member(email VARCHAR(100) PRIMARY KEY, password VARCHAR(50),gender VARCHAR(10),age VARCHAR(10));")
-                    SQL_DB.execSQL("insert into member(email,password) values('"+
-                            emailText.getText().toString()+"','"+PasswordText.getText().toString()+"');")
+                    SQL_DB.execSQL("Create table if not exists member(email VARCHAR(100) PRIMARY KEY, password VARCHAR(50),gender VARCHAR(10),age VARCHAR(10),isLogin VARCHAR(10));")
+                    SQL_DB.execSQL("insert into member(email,password,isLogin) values('"+
+                            emailText.getText().toString()+"','"+PasswordText.getText().toString()+"','true');")
                     SQL_DB.close()
                 }catch (e : Exception){
                     Log.e("DB insert 에러 ",e.message)
@@ -99,7 +99,7 @@ class registerLayout : AppCompatActivity() {
             }else{
                 try{
                     var SQL_DB = this.openOrCreateDatabase("memberList", Context.MODE_PRIVATE, null);
-                    SQL_DB.execSQL("Create table if not exists member(email VARCHAR(100) PRIMARY KEY, password VARCHAR(50),gender VARCHAR(10),age VARCHAR(10));")
+                    SQL_DB.execSQL("Create table if not exists member(email VARCHAR(100) PRIMARY KEY, password VARCHAR(50),gender VARCHAR(10),age VARCHAR(10),isLogin VARCHAR(10));")
                     SQL_DB.execSQL("UPDATE member SET gender='"+GenderText+"',age='"+AgeText+"' WHERE email = '"+emailText.getText().toString()+"';")
                     SQL_DB.close()
                 }catch (e : Exception){

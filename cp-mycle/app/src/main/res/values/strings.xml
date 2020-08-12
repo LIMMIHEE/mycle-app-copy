@@ -8,4 +8,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="register"><u>지금 계정 만들기</u></string>
+
+    <string name="PwChnage"><u>비밀번호 변경</u></string>
 </resources>
